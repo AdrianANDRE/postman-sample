@@ -6,6 +6,45 @@
 	},
 	"item": [
 		{
+			"name": "byebye",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Body matches string\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"postman-samples\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://gitlab.com/api/v4/projects/31338079",
+					"protocol": "https",
+					"host": [
+						"gitlab",
+						"com"
+					],
+					"path": [
+						"api",
+						"v4",
+						"projects",
+						"31338079"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "1_PassingTest_id_29428053",
 			"event": [
 				{
@@ -45,7 +84,7 @@
 			"response": []
 		},
 		{
-			"name": "2_FailedTest_id_31338079",
+			"name": "hello",
 			"event": [
 				{
 					"listen": "test",
